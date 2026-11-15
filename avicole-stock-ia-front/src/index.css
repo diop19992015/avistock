@@ -1,0 +1,66 @@
+:root {
+  --background: #efe5d2;
+  --panel: #fffaf3;
+  --text: #332417;
+  --muted: #74614a;
+  --accent: #7b5632;
+  --accent-dark: #5d3e23;
+  --border: #dec9a8;
+  --danger: #b04639;
+  --success: #2f7a5b;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 248, 230, 0.9), transparent 34%),
+    linear-gradient(135deg, #f6efdf 0%, #ebddc2 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Cambria, Georgia, serif;
+  color: var(--text);
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+h2 {
+  margin-bottom: 6px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}

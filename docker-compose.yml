@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: avistock-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:h2:file:/app/data/avistock-db;DB_CLOSE_ON_EXIT=FALSE"
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: ""
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    volumes:
+      - avistock-h2-data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./avicole-stock-ia-front
+      dockerfile: Dockerfile
+    container_name: avistock-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  avistock-h2-data:

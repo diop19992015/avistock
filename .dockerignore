@@ -1,0 +1,15 @@
+.git
+.gitignore
+.classpath
+.factorypath
+.project
+.settings
+target
+data
+spring-run.log
+spring-run.err.log
+documents
+tools
+avicole-stock-ia-front
+*.md
+HELP.md
